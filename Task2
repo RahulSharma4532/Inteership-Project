@@ -1,1 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>My To-Do List</h1>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-btn">Add</button>
+        </div>
+
+        <div class="todo-container">
+            <ul id="todo-list">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
+
+//script 2
+
+document.addEventListener('DOMContentLoaded', () => {
+    const todoInput = document.getElementById('todo-input');
+    const addBtn = document.getElementById('add-btn');
+    const todoList = document.getElementById('todo-list');
+
+    // Add Task Function
+    function addTask() {
+        const taskText = todoInput.value.trim();
+
+        if (taskText === '') {
+            alert('Please enter a task!');
+            return;
+        }
+
+        const todoItem = document.createElement('li');
+        todoItem.classList.add('todo-item');
+
+        const leftDiv = document.createElement('div');
+        leftDiv.style.display = "flex";
+        leftDiv.style.alignItems = "center";
+        leftDiv.style.flex = "1";
+
+        // Check Button
+        const checkBtn = document.createElement('button');
+        checkBtn.innerHTML = '&#10003;';
+        checkBtn.classList.add('check-btn');
+        checkBtn.addEventListener('click', () => {
+            todoItem.classList.toggle('completed');
+        });
+
+        // Task Text
+        const textSpan = document.createElement('span');
+        textSpan.innerText = taskText;
+        textSpan.classList.add('todo-text');
+        textSpan.addEventListener('click', () => {
+            todoItem.classList.toggle('completed');
+        });
+
+        leftDiv.appendChild(checkBtn);
+        leftDiv.appendChild(textSpan);
+
+        // Delete Button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerHTML = '&#128465;';
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.addEventListener('click', () => {
+            todoItem.style.transform = "translateX(50px)";
+            todoItem.style.opacity = "0";
+            setTimeout(() => {
+                todoItem.remove();
+            }, 300);
+        });
+
+        todoItem.appendChild(leftDiv);
+        todoItem.appendChild(deleteBtn);
+
+        todoList.appendChild(todoItem);
+
+        // Clear Input
+        todoInput.value = '';
+    }
+
+    // Event Listeners
+    addBtn.addEventListener('click', addTask);
+
+    todoInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            addTask();
+        }
+    });
+});
+
+
+//style sheet
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --background-color: #dfe6e9;
+    --text-color: #2d3436;
+    --white: #ffffff;
+    --danger: #ff7675;
+    --success: #00b894;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #b2bec3;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#todo-input:focus {
+    border-color: var(--primary-color);
+}
+
+#add-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+#todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f2f6;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-text {
+    flex: 1;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    color: #b2bec3;
+}
+
+.delete-btn {
+    background-color: var(--danger);
+    color: var(--white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #d63031;
+}
+
+.check-btn {
+    background-color: var(--success);
+    color: var(--white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.check-btn:hover {
+    background-color: #00cec9;
+}
