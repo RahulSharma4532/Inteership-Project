@@ -1,0 +1,23 @@
+{
+  "name": "internship-task",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000I\u0000n\u0000t\u0000e\u0000e\u0000r\u0000s\u0000h\u0000i\u0000p\u0000-\u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
+  "main": "script2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulSharma4532/Inteership-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RahulSharma4532/Inteership-Project/issues"
+  },
+  "homepage": "https://github.com/RahulSharma4532/Inteership-Project#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

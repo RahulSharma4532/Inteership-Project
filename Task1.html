@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Rahul Shrama(Elevate Lab)</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <h1>Let's Create Something Amazing</h1>
+            <p>Build your brand with a modern, responsive landing page that converts.</p>
+            <a href="#get-started" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Fast Performance</h3>
+                    <p>Optimized for speed to ensure the best user experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Responsive Design</h3>
+                    <p>Looks great on all devices, from desktops to mobiles.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Easy to Customize</h3>
+                    <p>Flexible code structure that is simple to modify.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Elevate Lab. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://twitter.com/@mr_ah_ul">Twitter</a>
+                <a href="https://www.linkedin.com/in/rahul-sharma1906/">LinkedIn</a>
+                <a href="https://www.instagram.com/mr_r_ah_ul/">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+
+</html>
