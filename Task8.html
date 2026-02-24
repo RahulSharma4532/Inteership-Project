@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate Lab - Insightful Tech Stories</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --bs-primary: #6366f1;
+            --bs-primary-rgb: 99, 102, 241;
+        }
+
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #4f46e5;
+            border-color: #4f46e5;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: var(--bs-primary) !important;
+        }
+
+        .footer {
+            background-color: #1e293b;
+            color: #f8fafc;
+        }
+
+        .blog-hero {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-rocket-takeoff-fill me-2"></i>Elevate Lab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Best Practices</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link px-3 btn btn-primary text-white ms-lg-3 mt-2 mt-lg-0"
+                            href="#">Subscribe</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="blog-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">The Future of Web Development</h1>
+            <p class="lead">Insights, tutorials, and stories from the cutting edge of technology.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mb-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Blog Card 1 -->
+            <div class="col">
+                <article class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="Code on screen">
+                    <div class="card-body">
+                        <div class="mb-2 text-primary small fw-semibold">Development • 5 min read</div>
+                        <h2 class="card-title h5 fw-bold">Mastering Modern CSS Layouts</h2>
+                        <p class="card-text text-muted">Learn how to use CSS Grid and Flexbox to build complex,
+                            responsive layouts with ease.</p>
+                        <a href="#" class="btn btn-outline-primary w-100">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="col">
+                <article class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="Software Architecture">
+                    <div class="card-body">
+                        <div class="mb-2 text-primary small fw-semibold">Architecture • 8 min read</div>
+                        <h2 class="card-title h5 fw-bold">Microservices vs Monoliths</h2>
+                        <p class="card-text text-muted">A deep dive into the pros and cons of different architectural
+                            patterns for modern apps.</p>
+                        <a href="#" class="btn btn-outline-primary w-100">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="col">
+                <article class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="Cybersecurity">
+                    <div class="card-body">
+                        <div class="mb-2 text-primary small fw-semibold">Security • 6 min read</div>
+                        <h2 class="card-title h5 fw-bold">10 Security Best Practices</h2>
+                        <p class="card-text text-muted">Protect your web applications from common vulnerabilities with
+                            these essential tips.</p>
+                        <a href="#" class="btn btn-outline-primary w-100">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="col">
+                <article class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="Laptop and coffee">
+                    <div class="card-body">
+                        <div class="mb-2 text-primary small fw-semibold">Productivity • 4 min read</div>
+                        <h2 class="card-title h5 fw-bold">Deep Work for Developers</h2>
+                        <p class="card-text text-muted">How to cultivate focus and perform at your peak in a world full
+                            of distractions.</p>
+                        <a href="#" class="btn btn-outline-primary w-100">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Card 5 -->
+            <div class="col">
+                <article class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="Data Visualization">
+                    <div class="card-body">
+                        <div class="mb-2 text-primary small fw-semibold">Data • 7 min read</div>
+                        <h2 class="card-title h5 fw-bold">Visualizing Real-time Data</h2>
+                        <p class="card-text text-muted">Using D3.js and Chart.js to create interactive dashboards that
+                            wow your users.</p>
+                        <a href="#" class="btn btn-outline-primary w-100">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Card 6 -->
+            <div class="col">
+                <article class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="AI brain">
+                    <div class="card-body">
+                        <div class="mb-2 text-primary small fw-semibold">AI • 10 min read</div>
+                        <h2 class="card-title h5 fw-bold">The Rise of GenAI in Coding</h2>
+                        <p class="card-text text-muted">Exploring how LLMs are changing the way software engineers write
+                            and maintain code.</p>
+                        <a href="#" class="btn btn-outline-primary w-100">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container text-center">
+            <div class="mb-4">
+                <a class="navbar-brand text-white fs-3" href="#"><i
+                        class="bi bi-rocket-takeoff-fill me-2"></i>Elevate Lab</a>
+            </div>
+            <div class="mb-4">
+                <a href="https://github.com/RahulSharma4532" class="text-white mx-3 fs-4"><i class="bi bi-github"></i></a>
+                <a href="https://x.com/mr_ah_ul" class="text-white mx-3 fs-4"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.linkedin.com/in/rahul-sharma1906/" class="text-white mx-3 fs-4"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:rs8759652@gmail.com" class="text-white mx-3 fs-4"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2026 Elevate Lab. All rights reserved. Created with Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
