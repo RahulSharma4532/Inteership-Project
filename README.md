@@ -55,7 +55,16 @@ This repository contains various tasks completed during my internship. Each task
   - Dynamic rendering of user information (names, emails, addresses).
   - Error handling for network issues or API failures.
   - Reload button to refresh data without page reload.
+ 
+### [Task 8: Bootstrap Blog Layout](file:///d:/RahulShrama/internship%20task/Task8.html)
+- **Objective:** Create a responsive blog page with navbar, cards, and footer using Bootstrap 5.
+- **Key Features:**
+  - Bootstrap 5 CDN integration for CSS and JS.
+  - Responsive grid system showing 1, 2, or 3 cards per row.
+  - Modern UI with hover animations and gradient hero section.
+  - Personalized with "Elevate Lab" branding and social links.
 
 ---
 **Rahul Sharma**
 [LinkedIn](https://www.linkedin.com/in/rahul-sharma1906/) | [Instagram](https://www.instagram.com/mr_r_ah_ul/)
+
